@@ -55,6 +55,13 @@
 
 #sheet{
     border: 1px solid black;
+    font-size: 1.5rem;
+    min-width: 70%;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
 }
 
 
@@ -62,4 +69,47 @@
 #generate{
     height: 5vh;
     width: 80vw; 
+}
+
+@media only screen and (min-width: 768px) {
+    #choose{
+        width: 80%;
+    }
+
+    .wow-buttons{
+        height: 5vh;
+        width: 20vw;
+    }
+
+    #generate{
+        height: 5vh;
+        width: 80%; 
+    }    
+}
+
+@media only screen and (min-width: 992px) {
+    .container{
+        height: 90vh;
+        width: 70vw;
+    }
+
+    .wow-buttons{
+        width: 10vw;
+    }
+
+    #generate{
+        height: 5vh;
+        width: 20vw; 
+    } 
+
+    #sheet{
+        border: 1px solid black;
+        font-size: 1.2rem;
+        min-width: 70%;
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5vh;
+    }
 }
