@@ -1,4 +1,4 @@
-import { dnd, WoW, genders, alignments, motivations, flaws, personalities, statRoll } from "./stats.js"
+import { dnd, WoW, alliance, horde, genders, alignments, motivations, flaws, personalities, statRoll } from "./stats.js"
 
 
 //roll for ... functions
@@ -20,6 +20,20 @@ function rollForWoW(){
     var races = Object.keys(WoW)//get just the races
     var race = races[Math.floor(Math.random() * races.length)]
     var _class = WoW[race][Math.floor(Math.random()* WoW[race].length)]//get random class from race's array
+    return [race, _class]
+}
+
+function rollForAlliance(){
+    var races = Object.keys(alliance)//get just the races
+    var race = races[Math.floor(Math.random() * races.length)]
+    var _class = alliance[race][Math.floor(Math.random()* alliance[race].length)]//get random class from race's array
+    return [race, _class]
+}
+
+function rollForHorde(){
+    var races = Object.keys(horde)//get just the races
+    var race = races[Math.floor(Math.random() * races.length)]
+    var _class = horde[race][Math.floor(Math.random()* horde[race].length)]//get random class from race's array
     return [race, _class]
 }
 
@@ -71,9 +85,9 @@ function rollForStats(){
 }
 
 const radios = document.getElementsByName('choose');
-
-//functions to set background
-function setBackground(){
+const wowBtns   = document.getElementsByClassName('wow-buttons');
+//functions to set background and toggle wow buttons
+function setImgBtns(){
     var game;
     for(const f of radios){
         if (f.checked){
@@ -82,15 +96,21 @@ function setBackground(){
     }
     if(game == "dnd"){
         document.getElementById('container').style.backgroundImage = "url('../assets/dndbackground.jpg')";
+        for(const f of wowBtns){
+            f.style.display = 'none'
+        }
     }
     if(game == "wow"){
         document.getElementById('container').style.backgroundImage = "url('../assets/wowbackground.jpg')";
+        for(const f of wowBtns){
+            f.style.display = 'block'
+        }
     }
 }
 
-setBackground();
+setImgBtns();
 for(let i=0; i<radios.length; i++){
-    radios[i].addEventListener('click', setBackground)
+    radios[i].addEventListener('click', setImgBtns)
 }
 
 //create character class
@@ -121,6 +141,59 @@ class WoWCharacter {
     }
 }
 
+class AllianceCharacter {
+    constructor(){
+        const [race, _class] = rollForAlliance()
+        this.race = race,
+        this.class = _class,
+        this.gender = rollForGender(),
+        this.align = rollForAlignment(),
+        this.motive = rollForMotive(),
+        this.flaw = rollForFlaw(),
+        this.person = rollForPersonality(),
+        this.stats = rollForStats()
+    }
+}
+
+class HordeCharacter {
+    constructor(){
+        const [race, _class] = rollForHorde()
+        this.race = race,
+        this.class = _class,
+        this.gender = rollForGender(),
+        this.align = rollForAlignment(),
+        this.motive = rollForMotive(),
+        this.flaw = rollForFlaw(),
+        this.person = rollForPersonality(),
+        this.stats = rollForStats()
+    }
+}
+
+//toggle between alliance and horde
+var faction = '';
+
+document.getElementById('alliance').addEventListener('click',()=>{
+    if(faction == 'alliance'){
+        faction = ''
+        document.getElementById('alliance').style.backgroundColor = '#6494ed8e'
+    }else{
+        faction = 'alliance'
+        document.getElementById('alliance').style.backgroundColor = '#6494ed'
+        document.getElementById('horde').style.backgroundColor = '#dd49679a'
+    }
+})
+
+document.getElementById('horde').addEventListener('click',()=>{
+    if(faction == 'horde'){
+        faction = ''
+        document.getElementById('horde').style.backgroundColor = '#dd49679a'
+    }else{
+        faction = 'horde'
+        document.getElementById('horde').style.backgroundColor = '#dd4967'
+        document.getElementById('alliance').style.backgroundColor = '#6494ed8e'
+    }
+})
+
 function generate(){//generate new character and display
     var game;
     for(const f of radios){
@@ -136,7 +209,13 @@ function generate(){//generate new character and display
     }
 
     if(game == 'wow'){
-        char = new WoWCharacter
+        if(faction == 'alliance'){
+            char = new AllianceCharacter
+        }else if(faction == 'horde'){
+            char = new HordeCharacter
+        }else{
+            char = new WoWCharacter
+        }
     }
 //Display in DOM
     document.getElementById('race').innerHTML = char.race;

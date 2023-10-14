@@ -26,6 +26,28 @@ const WoW ={
     'Dracthyr': ['Evoker']
 }
 
+const alliance = {
+    'Human':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Monk', 'Death Knight'],
+    'Dwarf':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest','Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Night Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Druid', 'Monk', 'Demon Hunter', 'Death Knight'],
+    'Gnome':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
+    'Draenei':  ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Worgen':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Death Knight'],
+    'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Shaman', 'Monk', 'Death Knight'],
+    'Dracthyr': ['Evoker']
+}
+
+const horde = {
+    'Orc':      ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
+    'Undead':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
+    'Tauren':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Troll':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Blood Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Monk', 'Demon Hunter', 'Death Knight'],
+    'Goblin':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Death Knight'],
+    'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Shaman', 'Monk', 'Death Knight'],
+    'Dracthyr': ['Evoker']
+}
+
 const genders = ['Male', 'Female', 'Non-binary'];
 
 const alignments = [
@@ -58,4 +80,4 @@ function statRoll (){//simulates rolling 4 d6, dropping lowest, and adding the r
     return stat
 }
 
-export {dnd, WoW, genders, alignments, motivations, flaws, personalities, statRoll}
+export {dnd, WoW, alliance, horde, genders, alignments, motivations, flaws, personalities, statRoll}
