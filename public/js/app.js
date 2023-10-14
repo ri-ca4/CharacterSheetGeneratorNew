@@ -70,6 +70,29 @@ function rollForStats(){
     return stats
 }
 
+const radios = document.getElementsByName('choose');
+
+//functions to set background
+function setBackground(){
+    var game;
+    for(const f of radios){
+        if (f.checked){
+            game = f.value
+        }
+    }
+    if(game == "dnd"){
+        document.getElementById('container').style.backgroundImage = "url('../assets/dndbackground.jpg')";
+    }
+    if(game == "wow"){
+        document.getElementById('container').style.backgroundImage = "url('../assets/wowbackground.jpg')";
+    }
+}
+
+setBackground();
+for(let i=0; i<radios.length; i++){
+    radios[i].addEventListener('click', setBackground)
+}
+
 //create character class
 class DnDCharacter {
     constructor(){
