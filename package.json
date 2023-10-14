@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ri-ca4/CharacterSheetGeneratorNew/issues"
   },
-  "homepage": "https://github.com/ri-ca4/CharacterSheetGeneratorNew#readme"
+  "homepage": "https://github.com/ri-ca4/CharacterSheetGeneratorNew#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
