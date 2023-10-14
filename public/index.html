@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Character Sheet Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="wrapper">
+            <div class="container">
+                <div id="choose">
+                    <h1>Choose Your Game</h1>
+                    <div id="radios">
+                            <input type="radio" name="choose" id="dnd" value="dnd" checked/>
+                            <label for="dnd">D&D</label>
+                            <input type="radio" name="choose" id="wow" value="wow"/>
+                            <label for="wow">WoW</label>
+                    </div>
+                </div>
+
+                <div id="wow">
+                    <button id="alliance" class="wow-buttons">Alliance</button>
+                    <button id="horde" class="wow-buttons">Horde</button>
+                </div>
+
+                <div id="sheet">
+                    <table id="character">
+                        <tr><td class="label">Race:</td>
+                            <td id="race" class="stat"></td></tr>
+                        <tr><td class="label">Class:</td>
+                            <td id="class" class="stat"></td></tr>
+                        <tr><td class="label">Gender:</td>
+                            <td id="gender" class="stat"></td></tr>
+                        <tr><td class="label">Alignment:</td>
+                            <td id="align" class="stat"></td></tr>
+                        <tr><td class="label">Motive:</td>
+                            <td id="motive" class="stat"></td></tr>
+                        <tr><td class="label">Flaw:</td>
+                            <td id="flaw" class="stat"></td></tr>
+                        <tr><td class="label">Personality:</td>
+                            <td id="person" class="stat"></td></tr>
+                        <tr><td class="label">Strength:</td>
+                            <td id="str" class="stat"></td></tr>
+                        <tr><td class="label">Dexterity:</td>
+                            <td id="dex" class="stat"></td></tr>
+                        <tr><td class="label">Constitution:</td>
+                            <td id="con" class="stat"></td></tr>
+                        <tr><td class="label">Intelligence:</td>
+                            <td id="int" class="stat"></td></tr>
+                        <tr><td class="label">Wisdom:</td>
+                            <td id="wis" class="stat"></td></tr>
+                        <tr><td class="label">Charisma:</td>
+                            <td id="chr" class="stat"></td></tr>
+                    </table>
+                </div>
+                
+                <button id="generate">Generate New</button>
+            </div>
+        </div>
+
+
+        <script type="module" src="js/stats.js" async defer></script>
+        <script type="module" src="js/app.js" async defer></script>
+
+    </body>
+</html>

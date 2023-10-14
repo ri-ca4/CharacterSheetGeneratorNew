@@ -1,0 +1,115 @@
+:root{
+    font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90vh;
+    width: 90vw;
+    border: 1px solid black;
+}
+
+#choose{
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.wow-buttons{
+    height: 5vh;
+    width: 30vw;
+    border-radius: 0;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#alliance{
+    background-color: #6495ed;
+}
+
+#horde{
+    background-color: #dd4966;
+}
+
+#sheet{
+    border: 1px solid black;
+    font-size: 1.5rem;
+    min-width: 70%;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh;
+}
+
+
+
+#generate{
+    height: 5vh;
+    width: 80vw; 
+}
+
+@media only screen and (min-width: 768px) {
+    #choose{
+        width: 80%;
+    }
+
+    .wow-buttons{
+        height: 5vh;
+        width: 20vw;
+    }
+
+    #generate{
+        height: 5vh;
+        width: 80%; 
+    }    
+}
+
+@media only screen and (min-width: 992px) {
+    .container{
+        height: 90vh;
+        width: 70vw;
+    }
+
+    .wow-buttons{
+        width: 10vw;
+    }
+
+    #generate{
+        height: 5vh;
+        width: 20vw; 
+    } 
+
+    #sheet{
+        border: 1px solid black;
+        font-size: 1.2rem;
+        min-width: 70%;
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5vh;
+    }
+}
