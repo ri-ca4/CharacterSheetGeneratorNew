@@ -123,7 +123,6 @@ class WoWCharacter {
 
 function generate(){//generate new character and display
     var game;
-    var radios = document.getElementsByName('choose');
     for(const f of radios){
         if (f.checked){
             game = f.value
