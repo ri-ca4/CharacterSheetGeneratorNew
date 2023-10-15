@@ -11,41 +11,61 @@ const dnd = {
 
 const WoW ={    
     'Human':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Monk', 'Death Knight'],
-    'Dwarf':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest','Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
-    'Night Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Druid', 'Monk', 'Demon Hunter', 'Death Knight'],
+    'Dwarf':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Night Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Monk', 'Demon Hunter', 'Death Knight'],
     'Gnome':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
-    'Draenei':  ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
-    'Worgen':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Death Knight'],
-    'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Shaman', 'Monk', 'Death Knight'],
+    'Draenei':  ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Worgen':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Monk', 'Death Knight'],
+    'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
+    'Dracthyr': ['Evoker'],
     'Orc':      ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
     'Undead':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
-    'Tauren':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Tauren':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
     'Troll':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
     'Blood Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Monk', 'Demon Hunter', 'Death Knight'],
-    'Goblin':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Death Knight'],
-    'Dracthyr': ['Evoker']
+    'Goblin':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
+    'Void Elf': ['Warrior', 'Hunter', 'Mage','Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
+    'Lightforged Draenei':  ['Warrior', 'Hunter', 'Mage','Rogue', 'Priest','Warlock', 'Palidin', 'Monk', 'Death Knight'],
+    'Dark Iron Dwarf':      ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest','Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Kul Tiran':            ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Mechagnome':           ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
+    'Nightborne':           ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock','Monk', 'Death Knight'],
+    'High Mountain Tauren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Mag\'Har Orc':         ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
+    'Zandalari Troll':      ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Vulpera':              ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight']
 }
 
 const alliance = {
     'Human':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Monk', 'Death Knight'],
-    'Dwarf':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest','Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
-    'Night Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Druid', 'Monk', 'Demon Hunter', 'Death Knight'],
+    'Dwarf':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Night Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Monk', 'Demon Hunter', 'Death Knight'],
     'Gnome':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
-    'Draenei':  ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
-    'Worgen':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Death Knight'],
-    'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Shaman', 'Monk', 'Death Knight'],
-    'Dracthyr': ['Evoker']
+    'Draenei':  ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Worgen':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Monk', 'Death Knight'],
+    'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
+    'Dracthyr': ['Evoker'],
+    'Void Elf': ['Warrior', 'Hunter', 'Mage','Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
+    'Lightforged Draenei': ['Warrior', 'Hunter', 'Mage','Rogue', 'Priest','Warlock', 'Palidin', 'Monk', 'Death Knight'],
+    'Dark Iron Dwarf':     ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest','Warlock', 'Palidin', 'Shaman', 'Monk', 'Death Knight'],
+    'Kul Tiran':           ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Mechagnome':          ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight']
 }
 
 const horde = {
     'Orc':      ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
     'Undead':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Monk', 'Death Knight'],
-    'Tauren':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Tauren':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
     'Troll':    ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
     'Blood Elf':['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Monk', 'Demon Hunter', 'Death Knight'],
-    'Goblin':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Death Knight'],
+    'Goblin':   ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
     'Pandaren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Shaman', 'Monk', 'Death Knight'],
-    'Dracthyr': ['Evoker']
+    'Dracthyr': ['Evoker'],
+    'Nightborne':           ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock','Monk', 'Death Knight'],
+    'High Mountain Tauren': ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Mag\'Har Orc':         ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight'],
+    'Zandalari Troll':      ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Palidin', 'Druid', 'Shaman', 'Monk', 'Death Knight'],
+    'Vulpera':              ['Warrior', 'Hunter', 'Mage', 'Rogue', 'Priest', 'Warlock', 'Shaman', 'Monk', 'Death Knight']
 }
 
 const genders = ['Male', 'Female', 'Non-binary'];
