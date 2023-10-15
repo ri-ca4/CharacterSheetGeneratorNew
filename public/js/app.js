@@ -176,10 +176,12 @@ document.getElementById('alliance').addEventListener('click',()=>{
     if(faction == 'alliance'){
         faction = ''
         document.getElementById('alliance').style.backgroundColor = '#6494ed8e'
+        console.log(faction)
     }else{
         faction = 'alliance'
         document.getElementById('alliance').style.backgroundColor = '#6494ed'
         document.getElementById('horde').style.backgroundColor = '#dd49679a'
+        console.log(faction)
     }
 })
 
@@ -187,10 +189,12 @@ document.getElementById('horde').addEventListener('click',()=>{
     if(faction == 'horde'){
         faction = ''
         document.getElementById('horde').style.backgroundColor = '#dd49679a'
+        console.log(faction)
     }else{
         faction = 'horde'
         document.getElementById('horde').style.backgroundColor = '#dd4967'
         document.getElementById('alliance').style.backgroundColor = '#6494ed8e'
+        console.log(faction)
     }
 })
 
@@ -211,10 +215,13 @@ function generate(){//generate new character and display
     if(game == 'wow'){
         if(faction == 'alliance'){
             char = new AllianceCharacter
+            console.log('alliance character')
         }else if(faction == 'horde'){
             char = new HordeCharacter
+            console.log('horde character')
         }else{
             char = new WoWCharacter
+            console.log('wow character')
         }
     }
 //Display in DOM
